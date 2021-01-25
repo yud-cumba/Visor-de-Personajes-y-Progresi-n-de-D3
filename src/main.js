@@ -19,7 +19,6 @@ new Vue({
   methods: {
     // Nuestra función
     init () {
-      console.log('holiiii')
       store.dispatch('oauth/getToken', null, { root: true })
     }
   },

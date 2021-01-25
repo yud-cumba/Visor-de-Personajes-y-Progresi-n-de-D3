@@ -26,7 +26,8 @@ export default {
       // Paso 1
       oauth.getToken()
         .then(({ data }) => {
-          console.log('data')
+          console.log(data)
+          commit('loading/SET_LOADING', true, { root: true }) // Vuex setea true
           // Paso 2: Guardamos el valor del token llamando a nuestra mutación
           commit('SET_ACCESS_TOKEN', data.access_token)
         })
@@ -38,6 +39,7 @@ export default {
         })
         .finally(() => {
           // Por ahora no hacemos nada más aquí
+          commit('loading/SET_LOADING', false, { root: true }) // Vuex setea false
           console.log('Done!')
         })
     }
