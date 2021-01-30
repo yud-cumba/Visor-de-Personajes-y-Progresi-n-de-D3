@@ -30,6 +30,7 @@ export default {
           commit('loading/SET_LOADING', true, { root: true }) // Vuex setea true
           // Paso 2: Guardamos el valor del token llamando a nuestra mutación
           commit('SET_ACCESS_TOKEN', data.access_token)
+          console.log('good')
         })
         .catch((err) => {
           console.log('error')
