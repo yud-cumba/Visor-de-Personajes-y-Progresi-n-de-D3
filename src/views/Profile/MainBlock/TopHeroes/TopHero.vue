@@ -1,6 +1,7 @@
 <template>
   <!-- Contenedor principal -->
-  <div class="hero-portrait-wrapper mb-5 mb-sm-0">
+  <div class="hero-portrait-wrapper mb-5 mb-sm-0"
+  @click="$router.push({ name: 'Hero', params: { region: $route.params.region, battleTag: $route.params.battleTag, heroId: hero.id}})">
     <!-- Avatar -->
     <div class="bg-secondary d-flex justify-content-center p-3 p-sm-0">
       <!-- Imagen de fondo, según la clase y el género -->

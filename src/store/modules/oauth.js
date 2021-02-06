@@ -22,12 +22,11 @@ export default {
       //  1 - Hacer llamada HTTP para obtener el token
       //  2 - Si va OK, guardar el token en 'accessToken'. Continuar el flujo normal
       //  3 - Si hay errror, limpiar el token de 'accessToken', mostrar log del error
-
+      commit('loading/SET_LOADING', true, { root: true }) // Vuex setea true
       // Paso 1
       oauth.getToken()
         .then(({ data }) => {
           console.log(data)
-          commit('loading/SET_LOADING', true, { root: true }) // Vuex setea true
           // Paso 2: Guardamos el valor del token llamando a nuestra mutación
           commit('SET_ACCESS_TOKEN', data.access_token)
           console.log('good')
