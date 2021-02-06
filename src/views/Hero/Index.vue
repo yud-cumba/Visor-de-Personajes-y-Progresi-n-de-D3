@@ -97,7 +97,7 @@ export default {
         this.$router.push({ name: 'Error' })
       })
       .finally(() => {
-        this.$store.commit('loading/SET_LOADING', true, { root: true })
+        this.$store.commit('loading/SET_LOADING', false, { root: true })
       })
 
     getApiDetailedHeroItems({ region, account, heroId })
@@ -109,7 +109,7 @@ export default {
         console.log(err)
       })
       .finally(() => {
-        this.$store.commit('loading/SET_LOADING', true, { root: true })
+        this.$store.commit('loading/SET_LOADING', false, { root: true })
       })
   }
 }
