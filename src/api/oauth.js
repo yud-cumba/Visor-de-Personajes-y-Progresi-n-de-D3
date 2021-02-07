@@ -1,7 +1,7 @@
 import { post } from 'axios'
 
-const clientId = '00d0c0f76e114a2a9063d493b8bba9b9'
-const clientSecret = 'IQp4DSv1meRB4YaS3wBnnPeurQ1mDBpH'
+const clientId = process.env.VUE_APP_CLIENT_ID
+const clientSecret = process.env.VUE_APP_CLIENT_SECRET
 
 // API URL para hacer oauth
 const region = 'eu'
