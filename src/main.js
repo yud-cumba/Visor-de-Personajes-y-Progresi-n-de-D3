@@ -8,6 +8,8 @@ import './plugins/bootstrapVue.js'
 // Vue Font-Awesome
 import './plugins/fontAwesome'
 
+import './directives'
+
 import './assets/css/main.styl'
 
 Vue.config.productionTip = false

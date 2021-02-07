@@ -27,6 +27,7 @@
 </template>
 
 <script>
+import { HeroData } from '@/utils/typeValidation'
 import heroName from '@/mixins/heroName'
 import SingleStat from './SingleStat'
 import TimePlayed from './TimePlayed'
@@ -42,6 +43,13 @@ export default {
     stats: {
       required: true,
       type: Object
+    }
+  },
+  computed: {
+    timePlayed () {
+      return Object.keys(this.stats.timePlayed).sort().map(hero => {
+        return new HeroData(this.classToName(hero), this.stats.timePlayed[hero], hero)
+      })
     }
   }
 }

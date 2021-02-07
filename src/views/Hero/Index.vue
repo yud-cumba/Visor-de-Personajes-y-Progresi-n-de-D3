@@ -1,13 +1,16 @@
 <template>
   <div class="hero-view">
+    <template v-if="isLoadingHero && isLoadingHero">
+    <BaseLoading />
+    </template>
+    <template v-else>
     <HeroDetailHeader v-if="hero" :detail="detailHeader"/>
 
     <b-row>
-      <!-- 12 columnas de 'xs' -> 'md', 8 columnas desde 'lg' hacia arriba  -->
-      <!-- En 'lg' orden 2 -->
-
-      <!-- 12 columnas de 'xs' -> 'md', 4 columnas desde 'lg' hacia arriba -->
-      <!-- En 'lg' orden 1 -->
+      <b-col md="12" lg="8" order-lg="2">
+        <!-- Componente de Items del personaje -->
+        <HeroItems v-if="items" :items="items"/>
+      </b-col>
       <b-col md="12" lg="4" order-lg="1">
         <template v-if="hero">
           <HeroAttributes :attributes="detailStats"/>
@@ -16,6 +19,7 @@
       </b-col>
 
     </b-row>
+    </template>
   </div>
 </template>
 
@@ -25,6 +29,8 @@ import { getApiHero, getApiDetailedHeroItems } from '@/api/search'
 import HeroDetailHeader from './HeroDetailHeader'
 import HeroAttributes from './HeroAttributes/Index'
 import HeroSkills from './HeroSkills/Index'
+import HeroItems from './HeroItems/Index'
+import BaseLoading from '../../components/BaseLoading.vue'
 
 export default {
   name: 'HeroView',
@@ -32,7 +38,9 @@ export default {
   components: {
     HeroDetailHeader,
     HeroAttributes,
-    HeroSkills
+    HeroSkills,
+    HeroItems,
+    BaseLoading
   },
   data () {
     return {
@@ -76,9 +84,9 @@ export default {
     }
   },
   created () {
-    this.$store.commit('loading/SET_LOADING', true, { root: true })
     const { region, battleTag: account, heroId } = this.$route.params
-
+    this.isLoadingHero = true
+    this.isLoadingItems = true
     getApiHero({ region, account, heroId })
       .then(({ data }) => {
         this.hero = data
@@ -97,7 +105,7 @@ export default {
         this.$router.push({ name: 'Error' })
       })
       .finally(() => {
-        this.$store.commit('loading/SET_LOADING', false, { root: true })
+        this.isLoadingHero = false
       })
 
     getApiDetailedHeroItems({ region, account, heroId })
@@ -109,7 +117,7 @@ export default {
         console.log(err)
       })
       .finally(() => {
-        this.$store.commit('loading/SET_LOADING', false, { root: true })
+        this.isLoadingItems = false
       })
   }
 }

@@ -1,6 +1,6 @@
 <template>
   <div class="top-heroes">
-    <h1>Top Heroes</h1>
+    <h1 class="font-diablo my-4">Top Heroes</h1>
     <b-row>
       <!-- No te olvides de poner el `key` cuando uses v-for -->
       <b-col sm="4" v-for="hero in heroes" :key="hero.id">

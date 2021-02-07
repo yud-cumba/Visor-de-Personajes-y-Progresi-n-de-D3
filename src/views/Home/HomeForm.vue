@@ -19,6 +19,7 @@
               type="text"
               size="lg"
               required
+              v-focus
               placeholder="BattleTag"
             />
           </b-form-group>

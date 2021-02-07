@@ -1,7 +1,9 @@
 <template>
   <!-- Contenedor principal -->
-  <div class="hero-portrait-wrapper mb-5 mb-sm-0"
-  @click="$router.push({ name: 'Hero', params: { region: $route.params.region, battleTag: $route.params.battleTag, heroId: hero.id}})">
+  <!-- <div class="hero-portrait-wrapper mb-5 mb-sm-0"
+  @click="$router.push({ name: 'Hero', params: { region: $route.params.region, battleTag: $route.params.battleTag, heroId: hero.id}})"> -->
+    <div class="hero-portrait-wrapper mb-5 mb-sm-0 hover-cursor-pointer" @click="goToHero(hero.id)">
+
     <!-- Avatar -->
     <div class="bg-secondary d-flex justify-content-center p-3 p-sm-0">
       <!-- Imagen de fondo, según la clase y el género -->
@@ -29,11 +31,13 @@
 </template>
 
 <script>
+import goToHero from '@/mixins/goToHero'
 // /TopHeroes/TopHero.vue
 import { formatNumber } from '@/filters/numeral'
 
 export default {
   name: 'TopHero',
+  mixins: [goToHero],
   props: {
     hero: {
       type: Object,
