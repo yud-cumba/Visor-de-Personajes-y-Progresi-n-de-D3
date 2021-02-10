@@ -11,7 +11,7 @@
             <!-- Nombre del objeto -->
             <p class="text-muted">{{ item.name }}</p>
             <!-- Imagen correspondiente al objeto -->
-            <img :src="itemUrl" :alt="item.slotName + ' ' + item.name ">
+            <img :src="itemUrl" :alt="item.slots + ' ' + item.name ">
           </div>
         </div>
 
@@ -57,6 +57,7 @@ export default {
   // Resuelve la URL de la imagen
     itemUrl () {
       const host = 'http://media.blizzard.com/d3/icons/items/large/'
+      console.log('host', `${host}${this.item.icon}.png`)
       return `${host}${this.item.icon}.png`
     },
     // Comprueba si el item tiene gemas
