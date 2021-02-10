@@ -9,7 +9,7 @@ Además utilizamos stylus como preprocesador css para el diseño y sprite css pa
 
 ## Version Desktop 🛠️
 <p align="center">
-  <img src="https://github.com/yud-cumba//blob/main/src/assets/img/desktop1.png.png" width="700" height="350">
+  <img src="https://github.com/yud-cumba/Visor-de-Personajes-y-Progresion-de-D3/blob/main/src/assets/img/desktop1.png" width="700" height="350">
 </p>
 <p align="center">
   <img src="https://github.com/yud-cumba/Visor-de-Personajes-y-Progresion-de-D3/blob/main/src/assets/img/desktop2.png" width="700" height="350">
@@ -67,17 +67,10 @@ Por implementar
 
 ## Despliegue 📦
 
-_Notas adicionales sobre como hacer deploy_
-
 * [https://visordepersonajesd3.web.app/](https://visordepersonajesd3.web.app/) - Link de despliegue producción
-## Versionado 📌
-
-
-* [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/yud-cumba/PMO-compratudepa/tags).
 
 ## Agradecimientos y colaboraciones 🛠️
 
-* [Yumari Cruz]() - Diseño UX
+* [PLATZI](https://platzi.com/home) - Curso avanzado de VUE.JS
 
-* [Roberto Fiestas]() - Diseño UX
 
