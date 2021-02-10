@@ -1,5 +1,6 @@
-# :iphone: CONFERENCIA INTERNACIONAL DE ÁLGEBRA Y SISTEMAS DINÁMICOS
+# :iphone: VISOR DE PERSONAJES DEL JUEGO DIABLO3
 ## Comenzando 🚀
+Puedes utilzar el usuario SuperRambo#2613 en la región US si quieres probar la aplicación y no juegas Diablo3
 
 **OBJETIVO**
 [https://visordepersonajesd3.web.app/](https://visordepersonajesd3.web.app/) Es mi primer proyecto desarrollado con VUEX.
@@ -8,7 +9,7 @@ Además utilizamos stylus como preprocesador css para el diseño y sprite css pa
 
 ## Version Desktop 🛠️
 <p align="center">
-  <img src="https://github.com/yud-cumba//blob/main/src/assets/img/desktop1.png" width="700" height="350">
+  <img src="https://github.com/yud-cumba//blob/main/src/assets/img/desktop1.png.png" width="700" height="350">
 </p>
 <p align="center">
   <img src="https://github.com/yud-cumba/Visor-de-Personajes-y-Progresion-de-D3/blob/main/src/assets/img/desktop2.png" width="700" height="350">
@@ -19,6 +20,7 @@ Además utilizamos stylus como preprocesador css para el diseño y sprite css pa
 <p align="center">
   <img src="https://github.com/yud-cumba/Visor-de-Personajes-y-Progresion-de-D3/blob/main/src/assets/img/desktop4.png" width="700" height="350">
 </p>
+
 ## Version Mobile :iphone:
 <p align="center" display="flex" >
   <img src="https://github.com/yud-cumba/Visor-de-Personajes-y-Progresion-de-D3/blob/main/src/assets/img/mobile1.png" width="330" height="630">
